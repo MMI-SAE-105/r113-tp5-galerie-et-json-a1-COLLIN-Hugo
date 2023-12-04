@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body x-data="{}">
+<body x-data="{
+    maVar: 'https://picsum.photos/id/237/400/300'
+}">
     <h1>Galerie</h1>
 <p>lorem⇥</p>
-<div class="overlay">
-    <figure><img src="https://picsum.photos/id/237/400/300" alt="image 237... un chiot"></figure>
+<div class="overlay" x-show="maVar" @click="maVar = null" @keyup.escape.window="maVar = null">
+    <figure><img :src="maVar" alt="image 237... un chiot"></figure>
 </div>
 </body>
 </html>
