@@ -22,6 +22,10 @@
     <img src=" https://picsum.photos/id/237/60/60" alt="chiot" @click="maVar='https://picsum.photos/id/237/200/300'">
     <img src="https://picsum.photos/id/238/60/60" alt="village" @click="maVar='https://picsum.photos/id/238/200/300'">
 
+<template x-for="image in images" :key="image.id">
+    <img :src="image.petite" :alt="image.alt" @click="maVar=image.grande">
+</template>
+
 <div class="overlay" x-show="maVar" @click="maVar = null" @keyup.escape.window="maVar = null">
     <figure><img :src="maVar" alt="image 237... un chiot"></figure>
 </div>
