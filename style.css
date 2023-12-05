@@ -1,16 +1,15 @@
 .overlay {
-    /* Sit on top of the page content */
-    /* Full width (cover the whole page) */
-    /* Full height (cover the whole page) */
-    /* Stay at the top */
-    /* Stay at the left */
-    /* Stay at the right */
-    /* Stay at the bottom */
-    /* Black background with opacity */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Add a pointer on hover */
-    /* Use a grid for easy centering */
-    /* Center vertically and horizontally */
+    cursor: pointer;
+    display: grid;
+    align-items: center;
 }
 .overlay::after {
     content: "X";
