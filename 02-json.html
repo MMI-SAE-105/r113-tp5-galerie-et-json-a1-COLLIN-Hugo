@@ -12,22 +12,22 @@
         données: [
         {
             nom: 'Jean',
-            projet: 'Alpine.js'
+            projet: 'Alpine.js',
             url: 'https://alpinejs.dev'
         },
         {
             nom: 'Maxime',
-            projet: 'Tailwind CSS'
+            projet: 'Tailwind CSS',
             url: 'https://tailwindcss.com'
         },
         {
             nom: 'Adam',
-            projet: 'Laravel'
+            projet: 'Laravel',
             url: 'https://laravel.com'
         }
     ],
 }">
-<template x-for="obj of donnnées">
+<template x-for="obj of données">
     <li>
         <span x-text="obj.nom">nom</span> : 
         <a :href="obj.url" x-text="obj.projet">projet</a>
