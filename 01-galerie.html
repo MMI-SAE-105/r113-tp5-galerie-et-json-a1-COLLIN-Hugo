@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body x-data="{maVar : nulle 'https://picsum.photos/id/235/60/60'}">
+<body x-data="{maVar : null}">
 
     <h1>Galerie</h1>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam veniam doloremque voluptatibus, repellat
     repellendus consectetur iste adipisci tempore sunt! Quisquam vel quae accusamus exercitationem in blanditiis
     eveniet, aliquam quibusdam laudantium!</p>
 
-    <img src="https://picsum.photos/id/235/60/60" alt="montage" @click="maVar='https://picsum.photos/id/235/500/600'">
-    <img src="https://picsum.photos/id/238/60/60" alt="village" @click="maVar='https://picsum.photos/id/238/500/600'">
+    <img src="/img/plus_petite_img3.png" alt="montage" @click="maVar='/img/plus_grande_img3.png'">
+    <img src="/img/plus_petite2.png" alt="harrypotter" @click="maVar='/img/plus_grande3.png'">
 
 <template x-for="image in images" :key="image.id">
     <img :src="image.petite" :alt="image.alt" @click="maVar=image.grande">
