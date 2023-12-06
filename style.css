@@ -39,5 +39,10 @@
     height: auto;
 }
 body {
-    background-color: violet;
+    background-color: #56b4b7;
+}
+h1 {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    color: #000;
 }
