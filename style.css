@@ -10,6 +10,7 @@
     cursor: pointer;
     display: grid;
     place-content: center;
+    background-color: blueviolet;
 }
 .overlay::after {
     content: "X";
@@ -36,4 +37,7 @@
 .overlay>figure>img {
     max-width: 100%;
     height: auto;
+}
+body {
+    background-color: violet;
 }
