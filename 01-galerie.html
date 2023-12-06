@@ -4,30 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body body x-data="{maVar=null,
-    async images() {
-        const rep = await fetch('images.json');
-        return await rep.json();
-    }
-    }">
+<body body x-data="{maVar : 'https://picsum.photos/id/235/60/60'}">
 
     <h1>Galerie</h1>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam veniam doloremque voluptatibus, repellat
     repellendus consectetur iste adipisci tempore sunt! Quisquam vel quae accusamus exercitationem in blanditiis
     eveniet, aliquam quibusdam laudantium!</p>
 
-    <img src=" https://picsum.photos/id/237/60/60" alt="chiot" @click="maVar='https://picsum.photos/id/237/200/300'">
-    <img src="https://picsum.photos/id/238/60/60" alt="village" @click="maVar='https://picsum.photos/id/238/200/300'">
+    <img src="https://picsum.photos/id/235/60/60" alt="montage" @click="maVar='https://picsum.photos/id/235/500/600'">
+    <img src="https://picsum.photos/id/238/60/60" alt="village" @click="maVar='https://picsum.photos/id/238/500/600'">
 
 <template x-for="image in images" :key="image.id">
     <img :src="image.petite" :alt="image.alt" @click="maVar=image.grande">
 </template>
 
 <div class="overlay" x-show="maVar" @click="maVar = null" @keyup.escape.window="maVar = null">
-    <figure><img :src="maVar" alt="image 237... un chiot"></figure>
+    <figure><img :src="maVar" alt="image.village"></figure>
 </div>
 </body>
 </html>
