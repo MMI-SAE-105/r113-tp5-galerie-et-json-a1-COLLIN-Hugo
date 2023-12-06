@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +27,10 @@
         }
     ],
 }">
-<template x-for="objet of donnnées">
+<template x-for="obj of donnnées">
     <li>
-        <span x-text="obj.nom">nom</span>: 
-        <a :href="obj.url" x-text="donnée.url">
-            projet</a>
+        <span x-text="obj.nom">nom</span> : 
+        <a :href="obj.url" x-text="obj.projet">projet</a>
     </li>
 </template>
     </ul>
